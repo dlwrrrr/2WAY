@@ -31,14 +31,14 @@ export default StyleSheet.create({
     borderWidth: 1, 
     width: '80%', 
     height: '6%',
-    borderRadius: 5,
+    borderRadius: 10,
     padding: 10, 
     margin: 13 },
 
   loginButton: { 
     backgroundColor: '#0075FF', 
     width: '80%',
-    borderRadius: 5,
+    borderRadius: 10,
     height: '6%',
     padding: 10, 
     marginTop: 20,
@@ -50,6 +50,30 @@ export default StyleSheet.create({
     fontSize: 23, },
 
   signupLink: { 
-    marginTop: 60, 
-    color: '#0075FF' },
+    marginTop: 60, },
+
+  signupbutton: {
+    color : 'black',
+    fontSize : 15,
+    fontWeight: 'bold',
+  },
+
+  signupcomplete: {
+    backgroundColor: '#0075FF', 
+    width: '80%', 
+    height: 50,
+    borderRadius: 10,
+    padding:10,
+    justifyContent: 'center',
+    alignItems:'center',
+    marginLeft:40,
+    marginTop: 40,
+
+  },
+  
+  signupcompleteText: {
+    color: 'white',
+    fontSize : 23,
+
+  }
 });

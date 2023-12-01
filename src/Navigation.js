@@ -3,19 +3,23 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './Login/LoginScreen'
 import PersonalProfile from './Personal/PersonalProfile';
 import CompanyProfile from './Company/CompanyProfile';
-import CompanySignUp from './Login/CompanySignUp';
-import PersonalSignUp from './Login/PersonalSignUp';
+import SignUp from './Login/SignUp/SignUp'
+import PersonalHome from './Personal/PersonalHome';
+import CompanyHome from './Company/CompanyHome';
+import CompanyInfoSetup from './Company/CompanyInfoSetup';
 
 const Stack = createStackNavigator();
 
 export default function Navigation() {
   return (
-    <Stack.Navigator initialRouteName="Login">
-      <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
+    <Stack.Navigator initialRouteName="Login" screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="PersonalProfile" component={PersonalProfile} />
       <Stack.Screen name="CompanyProfile" component={CompanyProfile} />
-      <Stack.Screen name="PersonalSignUp" component={PersonalSignUp} />
-      <Stack.Screen name="CompanySignUp" component={CompanySignUp} />
+      <Stack.Screen name= "SignUp" component={SignUp} />
+      <Stack.Screen name= "PersonalHome" component={PersonalHome} />
+      <Stack.Screen name= "CompanyHome" component={CompanyHome} />
+      <Stack.Screen name= "CompanyInfoSetup" component={CompanyInfoSetup}/>
     </Stack.Navigator>
   );
 }

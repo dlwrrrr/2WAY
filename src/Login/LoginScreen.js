@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, Keyboard, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, TouchableWithoutFeedback, Keyboard, Alert, } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './LoginScreenStyle'
 
@@ -23,18 +23,15 @@ export default function LoginScreen() {
         return;
     }
     if (isPersonal) {
-      navigation.navigate('PersonalProfile');
+      navigation.navigate('PersonalHome');
     } else {
-      navigation.navigate('CompanyProfile');
+      navigation.navigate('CompanyHome');
     }
   };
 
   const handleSignUp = () => {
-    if (isPersonal) {
-      navigation.navigate('PersonalSignUp');
-    } else {
-      navigation.navigate('CompanySignUp');
-    }
+      navigation.navigate('SignUp', {isPersonal: isPersonal});
+    
   };
 
   return (
@@ -65,7 +62,7 @@ export default function LoginScreen() {
       />
       <TextInput
         style={styles.input}
-        keyboardType="done"
+        keyboardType="visible-password"
         placeholder="비밀번호를 입력하세요."
         onChangeText={setPassword}
         value={password}
@@ -74,8 +71,11 @@ export default function LoginScreen() {
       <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
         <Text style={styles.loginButtonText}>로그인</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={handleSignUp}>
-        <Text style={styles.signupLink}>회원가입</Text>
+      <TouchableOpacity 
+       hitslop={{top: 10, bottom: 10, left: 10, right: 10}}
+       style={styles.signupLink}
+       onPress={handleSignUp} >
+        <Text style={{color:'gray'}}>아직 회원이 아니세요?<Text style={styles.signupbutton}>  회원가입</Text></Text>
       </TouchableOpacity>
     </View>
     </TouchableWithoutFeedback>
