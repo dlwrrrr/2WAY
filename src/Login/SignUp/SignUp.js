@@ -8,6 +8,10 @@ import { useNavigation } from "@react-navigation/native";
 
 export default function SignUp ({route}){
 
+
+    const handleAPI=()=>{
+        
+    }
     const [isPersonal, setIsPersonal] = useState(route.params.isPersonal);
 
     const [name, setName] = useState('')

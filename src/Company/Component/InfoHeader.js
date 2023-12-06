@@ -7,7 +7,7 @@ const InfoHeader = () => {
   const navigation = useNavigation();
 
   return (
-    <View style={{ flexDirection: 'row', backgroundColor: '#0075FF', padding: 10, alignItems: 'center', height: '28%' }}>
+    <View style={{ flexDirection: 'row', backgroundColor: '#0075FF', padding: 10, alignItems: 'center', height: 60 }}>
       <TouchableOpacity onPress={() => navigation.navigate('CompanyHome')}>
         <AntDesign name="home" size={24} color="white" />
       </TouchableOpacity>

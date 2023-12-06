@@ -54,7 +54,7 @@ export default function CompanyInfoSetup(){
 
 
     return(
-        <SafeAreaView>
+        <SafeAreaView style={{flex:1}}>
           <InfoHeader/>
           <KeyboardAvoidingView 
                 behavior={Platform.OS === "ios" ? "padding" : "height"} 
