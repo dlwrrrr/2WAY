@@ -82,12 +82,12 @@ export default StyleSheet.create({
     modalContent: {
         position: 'absolute',
         bottom: 0,
-        left: '5%',  // 좌우 여백 추가하여 모달의 너비 조정
-        right: '5%',  // 좌우 여백 추가하여 모달의 너비 조정
-        backgroundColor: 'ccc',  // 배경 색상 변경
-        padding: 20,  // 패딩 추가
+        left: '5%',  
+        right: '5%',  
+        backgroundColor: 'ccc',  
+        padding: 20, 
         height:'50%',
-        borderRadius: 10,  // 모달의 모서리를 둥글게
+        borderRadius: 10,  
         justifyContent: 'center',
     },
     removeIcon: {
@@ -121,7 +121,16 @@ export default StyleSheet.create({
         justifyContent: 'center',
         borderColor: '#0075FF',
         borderWidth: 1,
-    }
+    },
+    postnext:{backgroundColor: '#0075FF',
+    padding: 10,
+    marginLeft:19,
+    marginBottom:20,
+    borderRadius: 5, 
+    alignItems: 'center',
+    justifyContent:'center', 
+    width: '90%',
+    height: 50}
         
     
 

@@ -6,6 +6,7 @@ import InfoHeader from "./Component/InfoHeader";
 import InfoInput from "./Component/InfoInput";
 import { Checkbox } from 'react-native-paper';
 import DatePickerModal from "../Component/DatePicker";
+import styles from './Style'
 
 
 export default function CompanyInfoSetup2(){
@@ -53,7 +54,7 @@ const toggleModal = () => {
 
   const handleBusinessChange = (text) => {
     const businessArray = text.split(',').map(item => item.trim());
-    setCompanyMainBusiness(businessArray);
+    CompanyMainBusiness(businessArray);
   };
 
 
@@ -132,7 +133,7 @@ return(
       <TextInput 
         style={{flexDirection:'row',borderColor: '#8F8F8F', borderWidth: 1, width: '90%', height: 50, borderRadius: 10, padding: 15, marginBottom: 15}} 
         placeholder="주요 사업을 입력해주세요"
-        onChangeText={handleBusinessChange} 
+        onChangeText={handleBusinessChange}
       />
     </View>
 
@@ -140,6 +141,11 @@ return(
   </TouchableWithoutFeedback>
   </ScrollView>
   </KeyboardAvoidingView>
+  <View style={{height: 1, backgroundColor: 'gray', marginVertical: 20}} />
+
+<TouchableOpacity style={styles.NextButton} onPress={handleComplete}>
+    <Text style={styles.NextText}>저장</Text>
+</TouchableOpacity>
   
 </SafeAreaView>
 )}

@@ -13,7 +13,10 @@ export default function CompanyProfile (){
     }
 
     const handleHome =()=>{
-        navigation.navigate('CompanyHome')
+      navigation.navigate('CompanyTabNavigation', {
+        screen: '홈',
+        params: { screen: 'CompanyHome' },
+      });
     }
 
     return (

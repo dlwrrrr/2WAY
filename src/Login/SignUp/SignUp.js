@@ -5,13 +5,14 @@ import SignupHeader from "./SignupHeader"
 import InputTitle from "./SignupTitle";
 import styles from '../LoginScreenStyle'
 import { useNavigation } from "@react-navigation/native";
+import axios from 'axios'
+import { SERVER_IP } from "../../Component/apiIP";
+
+
 
 export default function SignUp ({route}){
 
 
-    const handleAPI=()=>{
-        
-    }
     const [isPersonal, setIsPersonal] = useState(route.params.isPersonal);
 
     const [name, setName] = useState('')
@@ -19,6 +20,36 @@ export default function SignUp ({route}){
     const [password, setPassword] = useState('');  
     const [passwordConfirm, setPasswordConfirm] = useState('')
     const navigation=useNavigation()
+
+    
+    const handleAPI = async () => {
+        let url = isPersonal ? 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/applicants' : 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/companies';
+    
+        try {
+            let response = await axios.put(url, {
+                name: name,
+                email: email,
+                password: password
+            });
+    
+            if (response.status === 201) {
+                let id = isPersonal ? response.data.applicantId : response.data.companyId;
+                console.log('회원가입 성공, ID:', id);
+    
+                // 회원 가입 성공 후 해당 프로필 페이지로 이동
+                if (isPersonal) {
+                    navigation.navigate('PersonalProfile');
+                } else {
+                    navigation.navigate('CompanyProfile');
+                }
+    
+            } else {
+                console.log('회원가입 실패:', response.data);
+            }
+        } catch (error) {
+            console.error('회원가입 중 오류 발생:', error);
+        }
+    }
 
     const handleSignUp = () => {
         if(!name) {
@@ -41,10 +72,8 @@ export default function SignUp ({route}){
           Alert.alert("비밀번호 불일치", "비밀번호가 일치하지 않습니다. 다시 입력해주세요.");
           return;
         }
-        if (isPersonal) {
-            navigation.navigate('PersonalProfile');
-        } else {
-            navigation.navigate('CompanyProfile');
+        else {
+            handleAPI();
         }
       }
 
