@@ -22,7 +22,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 const Tab = createMaterialTopTabNavigator();
 
-function ongoing(){
+function Ongoing(){
     return(
 
         <View><Text>ongoing</Text></View>
@@ -30,7 +30,7 @@ function ongoing(){
     )
 }
 
-function closed(){
+function Closed(){
     return(
         <View><Text>closed</Text></View>
     )
@@ -41,8 +41,8 @@ export default function ManageJobs(){
     return(
         <SafeAreaView style={{flex:1}}>
         <Tab.Navigator>
-        <Tab.Screen name="진행중" component={ongoing} />
-        <Tab.Screen name="마감" component={closed} />
+        <Tab.Screen name="진행중" component={Ongoing} />
+        <Tab.Screen name="마감" component={Closed} />
         </Tab.Navigator>
         </SafeAreaView>
     )

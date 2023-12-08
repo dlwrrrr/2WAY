@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, SafeAreaView, TouchableOpacity, Modal,TouchableWithoutFeedback,Keyboard, 
-    KeyboardAvoidingView, Platform , TextInput, ScrollView, Image } from "react-native";
+    KeyboardAvoidingView, Platform , ScrollView,  } from "react-native";
 import Header from './Header'
 import styles from '../Style'
 import { Checkbox } from 'react-native-paper';

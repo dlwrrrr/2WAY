@@ -16,7 +16,6 @@
         <Text style={styles.companyname}>회사명{/*Companyinfo.companyName*/ }</Text>
         </View>
         <Text style={styles.title}>회사소개</Text>
-        <Text></Text>
         <View style={{height: 1, backgroundColor: 'gray', marginVertical: 20}} />
         <Text style={styles.title}>기업소개</Text>
 

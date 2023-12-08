@@ -19,8 +19,8 @@ export default function PostJobStep1 (){
     'SQL','HTML','CSS','ReactJS','VueJS','Angular','NodeJS','Django','Spring','ASP.NET','Flutter','React Native',
     'Docker','Kubernetes','AWS','Google Cloud Platform','Azure']
     
-    const [title, setTitle] = useState('');
-    const [selectedJobPosition, setSelectedJobPosition] = useState([]);
+    const [title, setTitle] = useState('');//제목
+    const [selectedJobPosition, setSelectedJobPosition] = useState([]);//직무
     const [selectedSkill, setSelectedSkill] = useState([]);
     const [modalVisibleJob, setModalVisibleJob] = useState(false);
     const [modalVisibleSkill, setModalVisibleSkill] = useState(false);

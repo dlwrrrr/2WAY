@@ -16,11 +16,13 @@ export default StyleSheet.create({
         fontWeight:'600',
         color:'gray',
         width:100,
+       
     },
     component:{
         fontSize:18,
         fontWeight:'600',
-        marginLeft:'10%'
+        marginLeft:'10%',
+       
     }
     
 

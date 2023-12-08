@@ -23,7 +23,7 @@ export default function SignUp ({route}){
 
     
     const handleAPI = async () => {
-        let url = isPersonal ? 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/applicants' : 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/companies';
+        {/*let url = isPersonal ? 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/applicants' : 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/companies';
     
         try {
             let response = await axios.put(url, {
@@ -34,7 +34,12 @@ export default function SignUp ({route}){
     
             if (response.status === 201) {
                 let id = isPersonal ? response.data.applicantId : response.data.companyId;
-                console.log('회원가입 성공, ID:', id);
+            console.log('회원가입 성공, ID:', id); navi아래 else {
+                console.log('회원가입 실패:', response.data);
+            }
+        } catch (error) {
+            console.error('회원가입 중 오류 발생:', error);
+        }*/}
     
                 // 회원 가입 성공 후 해당 프로필 페이지로 이동
                 if (isPersonal) {
@@ -43,12 +48,7 @@ export default function SignUp ({route}){
                     navigation.navigate('CompanyProfile');
                 }
     
-            } else {
-                console.log('회원가입 실패:', response.data);
-            }
-        } catch (error) {
-            console.error('회원가입 중 오류 발생:', error);
-        }
+            
     }
 
     const handleSignUp = () => {

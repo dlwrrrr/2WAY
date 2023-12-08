@@ -23,18 +23,18 @@ export default function LoginScreen() {
     }
   
     // isPersonal의 값에 따라 URL 선택
-    const url = isPersonal ? 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/applicants' : 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/companies';
+    // const url = isPersonal ? 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/applicants' : 'https://3c3uqw-ip-219-251-96-151.tunnelmole.net/companies';
   
-    // 서버에 로그인 요청을 보냄
-    try {
-      let response = await axios.post(url, {
-        email: email,
-        password: password,
-      });
+    // // 서버에 로그인 요청을 보냄
+    // try {
+    //   let response = await axios.post(url, {
+    //     email: email,
+    //     password: password,
+    //   });
   
-      if (response.status === 200) { // 로그인 성공
-        let token = response.data.token;
-        await storeToken(token)
+    //   if (response.status === 200) { // 로그인 성공
+    //     let token = response.data.token;
+    //     await storeToken(token)
   
         if (isPersonal) {
           navigation.navigate('PersonalHome'); 
@@ -44,12 +44,12 @@ export default function LoginScreen() {
             params: { screen: 'CompanyHome' },
           });
         }
-      } else { // 로그인 실패
-        Alert.alert('알림', '이메일이나 비밀번호를 확인해주세요.');
-      }
-    } catch (error) {
-      console.error('로그인 중 오류 발생:', error);
-    }
+    //   } else { // 로그인 실패
+    //     Alert.alert('알림', '이메일이나 비밀번호를 확인해주세요.');
+    //   }
+    // } catch (error) {
+    //   console.error('로그인 중 오류 발생:', error);
+    // }
   };
    
   
