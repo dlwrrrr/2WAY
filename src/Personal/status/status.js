@@ -1,11 +1,21 @@
 import React from "react";
-import { View,Text } from "react-native";
+import { View,Text, SafeAreaView } from "react-native";
+import  StatusTopNavi from './statusTab'
 
 export default function Status(){
 
     return(
-        <View>
-            <Text>지원현황</Text>
-        </View>
+        <SafeAreaView style={{flex:1, backgroundColor:'white'}}>
+            <View style={{ flexDirection: 'row', backgroundColor: '#0075FF', padding: 10, alignItems: 'center', height: 60 }}>
+                <Text style={{ fontSize: 20, color: 'white', marginLeft: 10, fontWeight:'700' }}>지원하기</Text>
+            </View>
+            
+
+
+            <View style={{flex:1}}>
+                <StatusTopNavi/>
+            </View>
+
+            </SafeAreaView>
     )
 }

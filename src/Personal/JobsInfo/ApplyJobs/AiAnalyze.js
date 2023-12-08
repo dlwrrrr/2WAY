@@ -111,7 +111,8 @@ export default function AiAnalyze({route}){
 
                    </View>
                     <View>
-                        <Text style={{marginTop:10, fontSize:20, fontWeight:'800',color:'#0075FF'}}>이렇게 수정해보세요 ! </Text>
+                        <Text style={{marginTop:10, fontSize:20, fontWeight:'800',color:'#0075FF'}}>수정사유 </Text>
+                        <Text>수정사유수정사유</Text>
 
                     </View>
 
@@ -130,6 +131,7 @@ export default function AiAnalyze({route}){
                             fontWeight:'600'}}>작성완료</Text>
                     </TouchableOpacity>
                 </KeyboardAvoidingView>
+                
             </SafeAreaView>
     )
 }

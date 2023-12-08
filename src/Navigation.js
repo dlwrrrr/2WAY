@@ -18,7 +18,7 @@ const Stack = createStackNavigator();
 
 export default function Navigation() {
   return (
-    <Stack.Navigator initialRouteName="PersonalTabNavigation" screenOptions={{headerShown: false}}>
+    <Stack.Navigator initialRouteName="ResumeSetup" screenOptions={{headerShown: false}}>
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="CompanyProfile" component={CompanyProfile} />
       <Stack.Screen name= "SignUp" component={SignUp} />

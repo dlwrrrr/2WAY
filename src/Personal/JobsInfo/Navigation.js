@@ -7,6 +7,7 @@ import Analyze from './ApplyJobs/Analyze';
 import ApplyJobs from './ApplyJobs/ApplyJobs';
 import AiAnalyze from './ApplyJobs/AiAnalyze';
 
+
 const Stack = createStackNavigator();
 
 export default function JobsNavigation() {

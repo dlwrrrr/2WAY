@@ -13,6 +13,10 @@ component:{
     fontWeight:'600',
     marginLeft:'10%',
     width:'50%'
-}
+},
+NextText:{
+    color: 'white', 
+    fontSize: 20, 
+    fontWeight:'600'},
 
 });

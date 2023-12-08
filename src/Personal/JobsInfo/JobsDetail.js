@@ -67,7 +67,7 @@ export default function JobsDetail({route}){
             </ScrollView>
             </View>
 
-            <DetailTopNavi/>
+            <DetailTopNavi/>    
             <View>
             <TouchableOpacity style={{backgroundColor: '#0075FF', padding: 10, alignItems: 'center',justifyContent:'center', height: 50}}
              onPress={handleApplyJob}>
